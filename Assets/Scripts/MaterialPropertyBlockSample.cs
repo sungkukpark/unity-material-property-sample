@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class MaterialPropertyBlockSample : MonoBehaviour
 {
+    private const int MaxColorValue = 255;
+
+    private static readonly int ColorPropertyID = Shader.PropertyToID("_BaseColor");
+
     public float TimeBetweenColorChanges = 0.5f;
 
     public bool IsRunning
@@ -32,10 +36,6 @@ public class MaterialPropertyBlockSample : MonoBehaviour
     }
 
     private bool isRunning;
-
-    private const int MaxColorValue = 255;
-
-    private static readonly int ColorPropertyID = Shader.PropertyToID("_BaseColor");
 
     [SerializeField] private SkinnedMeshRenderer[] SkinnedMeshRenderers;
 
